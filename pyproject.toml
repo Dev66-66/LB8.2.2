@@ -1,0 +1,26 @@
+[project]
+name = "mycli"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "Dev66_66",email = "kanekikek02@yandex.ru"}
+]
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "click (>=8.3.1,<9.0.0)"
+]
+
+[tool.poetry]
+packages = [{include = "mycli", from = "src"}]
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+mycli = "mycli.main:hello"
+
+[tool.black]
+line-length = 88
+target-version = ['py313']
